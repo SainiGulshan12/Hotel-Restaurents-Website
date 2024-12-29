@@ -1,0 +1,202 @@
+.about{
+    background-color: var(--menu-back-color);
+}
+.delivery{
+    position: relative;
+    background: url(../../images/delivery.jpg);
+    background-size: 50vw 60vh;
+    height: 60vh;
+    margin-top: .63rem;
+}
+.delivery .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.65);
+}
+.delivery .content {
+    position: relative;
+    text-align: center;
+    padding-top: 2.50rem;
+    width: 100%;
+ }
+.delivery .content h3{
+    font-size: 1.25rem;
+}
+.delivery .content h1{
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+.delivery .content .call{
+    background-color: var(--lightredish-color);
+    border-radius: 1.25rem;
+    padding: .44rem 1.88rem;
+    margin-top: .63rem;
+    color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.delivery .content .call:hover{
+    background: transparent;
+    border: 1px solid var(--lightredish-color);
+    color: var(--lightredish-color);
+    font-weight: 900;
+}
+.contact{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.contact h3{
+    color: var(--you-color);
+    font-size: 1rem;
+    margin: 2.50rem 0px 1.25rem 0px;
+}
+.contact .locat p,
+.contact .workinghou p,
+.contact .order p{
+    font-weight: 200;
+    font-size: 1rem;
+}
+.contact .order h2{
+    color: var(--you-color);
+    font-weight: 200;
+}
+.contact .follow p{
+    display: inline-block;
+    padding: .63rem;
+}
+.contact .follow p .i{
+    padding: .63rem;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .8s ease;
+    border-radius: 50%;
+}
+.contact .follow p:nth-child(2) .i{
+    color: var(--insta-color);
+}
+.contact .follow p:nth-child(3) .i{
+    color: var(--face-color);
+}
+.contact .follow p:nth-child(4) .i{
+    color: var(--twit-color);
+}
+.contact .follow p:nth-child(5) .i{
+    color: var(--you-color);
+}
+.contact .follow p:nth-child(2):hover .i{
+    color: var(--insta-color);
+    transform: translateY(40px) scale(1.5);
+    box-shadow: 0px 3px 15px 0px var(--insta-color);
+}
+.contact .follow p:nth-child(3):hover .i{
+    color: var(--face-color);
+    transform: translateY(40px) scale(1.5);
+    box-shadow: 0px 3px 15px 0px var(--face-color);
+}
+.contact .follow p:nth-child(4):hover .i{
+    color: var(--twit-color);
+    transform: translateY(40px) scale(1.5);
+    box-shadow: 0px 3px 15px 0px var(--twit-color);
+}
+.contact .follow p:nth-child(5):hover .i{
+    color: var(--you-color);
+    transform: translateY(40px) scale(1.5);
+    box-shadow: 0px 3px 15px 0px var(--you-color);
+}
+
+/* Responsive */
+
+@media (max-width:1040px){
+    .contact .locat p,
+    .contact .workinghou p,
+    .contact .order p{
+        font-size: 0.85rem;
+    }
+    .contact .order h2{
+        font-size: 1.3rem;
+    }
+    .contact .follow p{
+        padding: 0.55rem;
+    }
+    .contact .follow p .i{
+        padding: 0.55rem;
+        font-size: 20px;
+    }
+    .contact .follow p:nth-child(2):hover .i{
+        color: var(--insta-color);
+        transform: translateY(35px) scale(1.4);
+        box-shadow: 0px 3px 15px 0px var(--insta-color);
+    }
+    .contact .follow p:nth-child(3):hover .i{
+        color: var(--face-color);
+        transform: translateY(35px) scale(1.4);
+        box-shadow: 0px 3px 15px 0px var(--face-color);
+    }
+    .contact .follow p:nth-child(4):hover .i{
+        color: var(--twit-color);
+        transform: translateY(35px) scale(1.4);
+        box-shadow: 0px 3px 15px 0px var(--twit-color);
+    }
+    .contact .follow p:nth-child(5):hover .i{
+        color: var(--you-color);
+        transform: translateY(35px) scale(1.4);
+        box-shadow: 0px 3px 15px 0px var(--you-color);
+    }
+}
+
+@media (max-width:870px){
+    .follow{
+        display: none;
+    }
+    .delivery{
+        background-size: 85vw 60vh;
+    }
+}
+@media(max-width:615px){
+    .delivery .content{
+        padding-top: 4rem;
+    }
+    .delivery .content h3{
+        font-size: 1.1rem;
+    }
+    .delivery .content h1{
+        font-size: 1.75rem;
+    }
+    .delivery .content p{
+        font-size: .9rem;
+    }
+    .delivery .content .call{
+        font-size: .75rem;
+        padding: .44rem 1.58rem;
+    }
+    .contact{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+    }
+    .contact .order{
+        margin-bottom: 1rem;
+    }
+    .contact .order h3{
+        margin-bottom: .9rem;
+    }
+}
+@media(max-width:520px){
+    .delivery .content{
+        padding: 4rem 1rem;
+    }
+    .contact{
+        letter-spacing: 0;
+    }
+}
+@media(max-width:481px){
+    .contact{
+        margin: 0 .5rem 0 .3rem ;
+    }
+    .delivery .content p{
+        font-size: .8rem;
+    }
+}

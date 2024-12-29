@@ -1,0 +1,87 @@
+.scroll-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.scroll-container .scrollmenu{
+    display: flex;
+    align-items: center;
+    height: 9.69rem;
+    margin: 0.5rem 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    letter-spacing: 0.5px;
+    flex: 1;
+}
+.scrollmenu::-webkit-scrollbar{
+    display: none;
+}
+.scroll-container::after{
+    content: '';
+    position: absolute;
+    width: 5%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(255,255,255,0)20% ,rgba(255,255,255,1)63%);
+}
+.scroll-container::before{
+    content: '';
+    position: absolute;
+    width: 5%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 1) 63%);
+}
+.scrollmenu .srlmenu{
+    text-align: center;
+    z-index: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.scrollmenu .srlmenu:hover{
+    transform: scale(1.15);
+}
+.scrollmenu .srlmenu img{
+    object-fit: cover;
+    height: 6.25rem;
+    width: 6.25rem;
+    margin-left: 0.94rem;
+    border-radius: 50%;
+    border: 1px solid var(--secondary-color);
+}
+.scrollmenu .srlmenu-piz{
+    margin-left: 1.5rem;
+}
+.scrollmenu .srlmenu-veg{
+    margin-right: 2.19rem;
+}
+.arrow-left,.arrow-right{
+    position: absolute;
+    top: 35%;
+    background: var(--menu-back-color);
+    border-radius: 50%;
+    padding: 0.63rem;
+    transition: 0.3s;
+    z-index: 3;
+    cursor: pointer;
+}
+.arrow-left{
+    left: 3rem;
+}
+.arrow-right{
+    right: 3rem;
+}
+.arrow-left:hover,
+.arrow-right:hover{ 
+    background: var(--orangish-color);
+    color: var(--secondary-color);
+}
+.arrow-left:active,.arrow-right:active{
+    background: var(--orangish-color);
+    color: var(--primary-color);
+}

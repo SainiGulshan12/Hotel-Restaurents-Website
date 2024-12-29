@@ -1,0 +1,165 @@
+footer{
+    border-top: 1px solid rgba(224, 28, 44, 0.3);
+    background: var(--footer-color);
+    padding: 10px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+.foot{
+    display: flex;
+    justify-content: center;
+}
+.foot p{
+    padding: 0 0.94rem;
+    margin-bottom: 0.63rem;
+    position: relative;
+}
+.foot p::after{
+    position: absolute;
+    content: '|';
+    color: var(--lightredish-color);
+    top: 1px;
+    right: -2px;
+}
+.foot p:last-child::after{
+    content: none;
+}
+.foot p a{
+    text-decoration: none;
+    color: var(--lightredish-color);
+}
+.owner p{
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+}
+.social p{
+    padding: .2rem;
+}
+.social p .i{
+    padding: .63rem;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+.social p:nth-child(1) .i{
+    color: var(--insta-color);
+}
+.social p:nth-child(2) .i{
+    color: var(--face-color);
+}
+.social p:nth-child(3) .i{
+    color: var(--twit-color);
+}
+.social p:nth-child(4) .i{
+    color: var(--you-color);
+}
+.social p:nth-child(1):hover .i{
+    color: var(--insta-color);
+    transform: scale(1.2);
+    box-shadow: 0px 3px 10px 0px var(--insta-color);
+}
+.social p:nth-child(2):hover .i{
+    color: var(--face-color);
+    transform: scale(1.2);
+    box-shadow: 0px 3px 10px 0px var(--face-color);
+}
+.social p:nth-child(3):hover .i{
+    color: var(--twit-color);
+    transform: scale(1.2);
+    box-shadow: 0px 3px 10px 0px var(--twit-color);
+}
+.social p:nth-child(4):hover .i{
+    color: var(--you-color);
+    transform: scale(1.2);
+    box-shadow: 0px 3px 10px 0px var(--you-color);
+}
+
+/* Responsive */
+
+@media(min-width:870px){
+    .owner .social{
+        display: none;
+    }
+}
+@media(max-width:870px){
+    .owner{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .owner .create{
+        margin-top: -10px;
+    }
+}
+@media(max-width:730px){
+    footer{
+        letter-spacing: 0;
+    }
+    .foot p{
+        padding: 0 0.64rem;
+    }
+    .foot p::after{
+        right: -2px;
+    }
+}
+@media(max-width:652px){
+    footer{
+        font-size: 0.65rem;
+    }
+    .foot p{
+        padding: 0 0.54rem;
+    }
+    /* .foot{
+        display: grid;
+        text-align: center;
+    }
+    .foot p::after{
+        display: none;
+    } */
+    /* .foot .omg{
+        display: none;
+    } */
+    /* .owner{
+        display: grid;
+        margin-bottom: 1rem;
+    } */
+    /* .owner .create{
+        margin-top: 1.5rem;
+    } */
+    /* .owner .create::after{
+        position: absolute;
+        content: '© 2024 OMG Hotel & Restaurants All Rights Reserved';
+        left: 0;
+        right: 0;
+        margin: 1.5rem 0;
+    } */
+    /* .owner .social{
+        margin-top: -4.5rem;
+    } */
+
+}
+@media(max-width:600px){
+    footer{
+        font-size: 0.6rem;
+    }
+    .foot p{
+        padding: 0 0.44rem;
+    }
+    .owner .create{
+        font-size: .6rem;
+    }
+}
+@media(max-width:548px){
+    footer{
+        font-size: 0.54rem;
+    }
+    .foot p{
+        padding: 0 0.34rem;
+    }
+}
